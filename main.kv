@@ -1,0 +1,7 @@
+<GPIOCanvas>:
+
+class GPIOCanvas(RelativeLayout):
+    def on_touch_down(self, touch):
+        with self.canvas:
+           touch.ud['line'] = Line(point=(touch.x, touch.y), width=2)
+        return super(GPIOCanvas, self).on_touch_down(touch)
